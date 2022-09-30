@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenLayers Web Map</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./libs/v6.1.1/ol.css">
+    <script src="https://openlayers.org/en/v5.3.0/build/ol.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyD_rrKCN3KSEuWOlw99q4w5J_KJl0Eht-s"></script>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-1">
+            <div class="sidebar">
+                <h2>Base Layers</h2>
+                <input type="radio" name="'baseLayerRadioButton" value='OSMStandard' checked>OSM Standard<br>
+                <input type="radio" name="'baseLayerRadioButton" value='OSMHumanitarian'>OSM Humanitarian<br>
+                <input type="radio" name="'baseLayerRadioButton" value='StamenTerrain'>Stamen Terrain<br>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <div id="js-map" class="map"></div>
+        </div>
+    </div>
+
+    <div class="overlay-container">
+        <span class="overlay-text" id="feature-name"></span><br>
+    </div>
+    
+    <script src="./main.js"></script>
+    <script src="./libs/v6.1.1/ol.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.4.3/proj4.js"></script>
+	<script src="http://epsg.io/22523.js"></script>
+
+</body>
+</html>
